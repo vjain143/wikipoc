@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=com.sun.xml.wss -DartifactId=xws-security -Dversion=2.0-FCS -Dpackaging=jar -Dfile=F:\springws-server-test\xws-security-2.0-FCS.jar

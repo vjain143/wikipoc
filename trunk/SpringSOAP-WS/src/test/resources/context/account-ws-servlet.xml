@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping"/>
+
+	<bean class="org.springframework.ws.server.endpoint.adapter.GenericMarshallingMethodEndpointAdapter">
+        <property name="marshaller" ref="marshaller" />
+        <property name="unmarshaller" ref="marshaller" />
+    </bean>
+	    
+    <bean id="marshaller" class="org.springframework.oxm.xmlbeans.XmlBeansMarshaller"/>
+
+	<bean id="accountServiceEndpoint" class="com.wiki.poc.ws.endpoint.AccountServiceEndpoint">
+		 <property name="repository" ref="repository" />	
+	</bean>
+	
+	<bean id="repository" class="com.wiki.poc.repository.StaticMapAccountRepository"/>
+	
+    <bean id="AccountService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
+        <property name="schema" ref="schema" />
+        <property name="portTypeName" value="wikiPortType" />
+        <property name="locationUri" value="/services/" />
+        <property name="targetNamespace" value="http://poc.wiki.com/services/wiki/definitions" />
+    </bean>
+
+    <bean id="schema" class="org.springframework.xml.xsd.SimpleXsdSchema">        
+        <property name="xsd" value="/schema/Schema.xsd" />
+    </bean>
+
+</beans>

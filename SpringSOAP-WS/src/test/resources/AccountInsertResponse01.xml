@@ -1,0 +1,3 @@
+<acc:AccountInsertResponse xmlns:acc="http://poc.wiki.com/AccountSchema">
+   <acc:status>Inserted</acc:status>
+</acc:AccountInsertResponse>

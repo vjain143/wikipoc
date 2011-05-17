@@ -1,3 +1,0 @@
-<acc:AccountSelectRequest xmlns:acc="http://poc.wiki.com/AccountSchema">
-	<acc:id>5</acc:id>
-</acc:AccountSelectRequest>   

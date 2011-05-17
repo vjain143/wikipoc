@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://poc.wiki.com/AccountSchema"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:vj="http://poc.wiki.com/AccountSchema">
+
+	<element name="AccountInsertRequest" type="vj:AccountInsertRequestType"></element>
+
+	<element name="AccountInsertResponse" type="vj:AccountInsertResponseType"></element>
+
+
+	<complexType name="AccountInsertResponseType">
+		<sequence>
+			<element name="status" type="string"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="AccountInsertRequestType">
+		<sequence>
+			<element name="id" type="string"></element>
+			<element name="name" type="string"></element>
+			<element name="organization" type="string"></element>
+		</sequence>
+	</complexType>
+
+    <element name="AccountSelectRequest" type="vj:AccountSelectRequestType"></element>
+
+    <complexType name="AccountSelectRequestType">
+    	<sequence>
+    		<element name="id" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="AccountSelectResponse" type="vj:AccountSelectResponseType"></element>
+
+    <complexType name="AccountSelectResponseType">
+    	<sequence>
+    		<element name="id" type="string"></element>
+    		<element name="name" type="string"></element>
+    		<element name="organization" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

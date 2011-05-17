@@ -1,0 +1,16 @@
+Go to Run --> External Tools Configrations --> Program --> Right Click --> New
+
+[Step 1] Set Location of Scomp XSD compiler.
+	 C:\home\Program Files\Apache\apache-xmlbeans-2.5.0\bin\scomp.cmd
+
+[Step 2] Set Working Directory.
+	 ${workspace_loc:/ApacheXMLBeans}
+
+[Step 3] Set Arguments to genrate jar, source file from xsd.
+	 "${workspace_loc:/ApacheXMLBeans/xsd}" -out "${workspace_loc:/ApacheXMLBeans/lib}/Schema.jar" -src "${workspace_loc:/ApacheXMLBeans/src}"
+
+[Step 4] Set JAVA_HOME as Name and Value to JDK home like "C:\Program Files\Java\jdk1.5.0_22".
+
+[Step 5] Set PATH as Name and Value to Java path up to bin like "C:\Program Files\Java\jdk1.5.0_22\bin"
+
+[Step 6] Set XMLBEANS_LIB as Name and Value to libraries of xmlbeans "C:\home\Program Files\Apache\apache-xmlbeans-2.5.0\lib"

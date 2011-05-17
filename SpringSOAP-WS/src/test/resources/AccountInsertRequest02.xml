@@ -1,5 +1,0 @@
-<acc:AccountInsertRequest xmlns:acc="http://poc.wiki.com/AccountSchema">
-	<acc:id>6</acc:id>
-         <acc:name>Bope</acc:name>
-         <acc:organization>CTS</acc:organization>
-</acc:AccountInsertRequest>

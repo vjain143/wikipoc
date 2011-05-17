@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" xmlns:vj="http://poc.wiki.com/services/accountsws/schemas"
+           targetNamespace="http://poc.wiki.com/services/accountsws/schemas" >
+	
+	<xs:simpleType name="id">
+        <xs:restriction base="xs:string"/>        
+    </xs:simpleType>
+	
+	<xs:element name="id" type="xs:integer" />
+	
+	<element name="AccountInsertRequest" type="vj:AccountInsertRequestType"></element>
+	
+	<complexType name="AccountInsertRequestType">
+		<xs:sequence>
+				<xs:element type="id"/>
+		</xs:sequence>
+	</complexType>
+		
+	<!-- 
+	<xs:element name="accountInsertRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" />
+				<xs:element ref="name" />
+				<xs:element ref="organization" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="accountInsertResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" />
+				<xs:element ref="stauts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="accountSelectRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="accountSelectResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" />
+				<xs:element ref="name" />
+				<xs:element ref="organization" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	-->
+	
+</xs:schema>

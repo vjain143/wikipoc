@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="AccountService" soapui-version="3.6.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="wikiPortTypeSoap11" type="wsdl" bindingName="{http://poc.wiki.com/services/wiki/definitions}wikiPortTypeSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/spring-soap-ws/services/AccountService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/spring-soap-ws/services/AccountService.wsdl"><con:part><con:url>http://localhost:8080/spring-soap-ws/services/AccountService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://poc.wiki.com/services/wiki/definitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://poc.wiki.com/AccountSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://poc.wiki.com/services/wiki/definitions">
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://poc.wiki.com/AccountSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vj="http://poc.wiki.com/AccountSchema">
+      <element name="AccountInsertRequest" type="vj:AccountInsertRequestType"/>
+      <element name="AccountInsertResponse" type="vj:AccountInsertResponseType"/>
+      <complexType name="AccountInsertResponseType">
+        <sequence>
+          <element name="status" type="string"/>
+        </sequence>
+      </complexType>
+      <complexType name="AccountInsertRequestType">
+        <sequence>
+          <element name="id" type="string"/>
+          <element name="name" type="string"/>
+          <element name="organization" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="AccountSelectRequest" type="vj:AccountSelectRequestType"/>
+      <complexType name="AccountSelectRequestType">
+        <sequence>
+          <element name="id" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="AccountSelectResponse" type="vj:AccountSelectResponseType"/>
+      <complexType name="AccountSelectResponseType">
+        <sequence>
+          <element name="id" type="string"/>
+          <element name="name" type="string"/>
+          <element name="organization" type="string"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="AccountInsertRequest">
+    <wsdl:part element="sch:AccountInsertRequest" name="AccountInsertRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AccountSelectResponse">
+    <wsdl:part element="sch:AccountSelectResponse" name="AccountSelectResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AccountSelectRequest">
+    <wsdl:part element="sch:AccountSelectRequest" name="AccountSelectRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AccountInsertResponse">
+    <wsdl:part element="sch:AccountInsertResponse" name="AccountInsertResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="wikiPortType">
+    <wsdl:operation name="AccountInsert">
+      <wsdl:input message="tns:AccountInsertRequest" name="AccountInsertRequest"></wsdl:input>
+      <wsdl:output message="tns:AccountInsertResponse" name="AccountInsertResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSelect">
+      <wsdl:input message="tns:AccountSelectRequest" name="AccountSelectRequest"></wsdl:input>
+      <wsdl:output message="tns:AccountSelectResponse" name="AccountSelectResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wikiPortTypeSoap11" type="tns:wikiPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AccountInsert">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="AccountInsertRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AccountInsertResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSelect">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="AccountSelectRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AccountSelectResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wikiPortTypeService">
+    <wsdl:port binding="tns:wikiPortTypeSoap11" name="wikiPortTypeSoap11">
+      <soap:address location="http://localhost:8080/spring-soap-ws/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/spring-soap-ws/services/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="AccountInsert" bindingOperationName="AccountInsert" type="Request-Response" outputName="AccountInsertResponse" inputName="AccountInsertRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/spring-soap-ws/services/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:acc="http://poc.wiki.com/AccountSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <acc:AccountInsertRequest>
+         <acc:id>5</acc:id>
+         <acc:name>BOPE</acc:name>
+         <acc:organization>CTS</acc:organization>
+      </acc:AccountInsertRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://poc.wiki.com/services/wiki/definitions/wikiPortType/AccountInsertRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="AccountSelect" bindingOperationName="AccountSelect" type="Request-Response" outputName="AccountSelectResponse" inputName="AccountSelectRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/spring-soap-ws/services/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:acc="http://poc.wiki.com/AccountSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <acc:AccountSelectRequest>
+         <acc:id>?</acc:id>
+      </acc:AccountSelectRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://poc.wiki.com/services/wiki/definitions/wikiPortType/AccountSelectRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

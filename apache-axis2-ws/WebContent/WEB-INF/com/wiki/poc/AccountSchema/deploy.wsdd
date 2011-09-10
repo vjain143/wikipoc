@@ -1,0 +1,58 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from AccountService WSDL service -->
+
+  <service name="AccountServiceSOAP" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://poc.wiki.com/AccountSchema"/>
+      <parameter name="wsdlServiceElement" value="AccountService"/>
+      <parameter name="schemaQualified" value="http://poc.wiki.com/AccountSchema"/>
+      <parameter name="wsdlServicePort" value="AccountServiceSOAP"/>
+      <parameter name="className" value="com.wiki.poc.AccountSchema.AccountServiceSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="AccountService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://poc.wiki.com/AccountSchema"
+        qname="ns:>AccountInsertResponse"
+        type="java:com.wiki.poc.AccountSchema.AccountInsertResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://poc.wiki.com/AccountSchema"
+        qname="ns:>AccountSelectRequest"
+        type="java:com.wiki.poc.AccountSchema.AccountSelectRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://poc.wiki.com/AccountSchema"
+        qname="ns:>AccountSelectResponse"
+        type="java:com.wiki.poc.AccountSchema.AccountSelectResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://poc.wiki.com/AccountSchema"
+        qname="ns:>AccountInsertRequest"
+        type="java:com.wiki.poc.AccountSchema.AccountInsertRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

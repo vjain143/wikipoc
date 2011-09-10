@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:vj="http://poc.wiki.com/AccountSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccountService" targetNamespace="http://poc.wiki.com/AccountSchema">
+	
+	<wsdl:types>
+		<wsdl:documentation>Account Service Request and Response element definition.</wsdl:documentation>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://poc.wiki.com/AccountSchema">
+
+			<element name="AccountInsertRequest">
+				<complexType>
+					<sequence>
+						<element name="id" type="string"/>
+						<element name="name" type="string"/>
+						<element name="organization" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="AccountInsertResponse">
+				<complexType>
+					<sequence>
+						<element name="status" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="AccountSelectRequest">
+				<complexType>
+					<sequence>
+						<element name="id" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="AccountSelectResponse">
+				<complexType>
+					<sequence>
+						<element name="id" type="string"/>
+						<element name="name" type="string"/>
+						<element name="organization" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</wsdl:types>
+
+	<wsdl:message name="AccountInsertRequest">
+		<wsdl:documentation>Account Service - Insert request message definition, to insert account details.</wsdl:documentation>
+		<wsdl:part element="vj:AccountInsertRequest" name="AccountInsertRequest">
+		</wsdl:part>
+	</wsdl:message>
+	
+	<wsdl:message name="AccountInsertResponse">
+		<wsdl:documentation>Account Service - Insert response message definition,  while an account is inserted.</wsdl:documentation>
+		<wsdl:part element="vj:AccountInsertResponse" name="AccountInsertResponse">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="AccountSelectRequest">
+		<wsdl:documentation>Account Service - Select request message definition, to select account details.</wsdl:documentation>
+		<wsdl:part element="vj:AccountSelectRequest" name="AccountSelectRequest">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="AccountSelectResponse">
+		<wsdl:documentation>Account Service - Select response message definition,  while an account is selected.</wsdl:documentation>
+		<wsdl:part element="vj:AccountSelectResponse" name="AccountSelectResponse">
+		</wsdl:part>
+	</wsdl:message>
+	
+
+	<wsdl:portType name="AccountService">
+		<wsdl:documentation>Account Service Port to bind insert and select operation.</wsdl:documentation>
+		<wsdl:operation name="AccountInsert">
+			<wsdl:input message="vj:AccountInsertRequest" name="AccountInsertRequest">
+			</wsdl:input>
+			<wsdl:output message="vj:AccountInsertResponse" name="AccountInsertResponse">
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="AccountSelect">
+			<wsdl:input message="vj:AccountSelectRequest" name="AccountSelectRequest">
+			</wsdl:input>
+			<wsdl:output message="vj:AccountSelectResponse" name="AccountSelectResponse">
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:portType>
+
+	<wsdl:binding name="AccountServiceSOAP" type="vj:AccountService">
+		<wsdl:documentation>Account Service Binding to bind protocol and style of binding along with port binding.</wsdl:documentation>
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+		<wsdl:operation name="AccountInsert">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="AccountInsertRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="AccountInsertResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="AccountSelect">
+			<wsdl:documentation/>
+			<soap:operation soapAction=""/>
+			<wsdl:input name="AccountSelectRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="AccountSelectResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<wsdl:service name="AccountService">
+		<wsdl:documentation>Account Service definition with binding and port.</wsdl:documentation>
+		<wsdl:port binding="vj:AccountServiceSOAP" name="AccountServiceSOAP">
+			<soap:address location="http://localhost:9080/apache-axis2-ws/services/AccountServiceSOAP"/>
+		</wsdl:port>
+	</wsdl:service>
+
+
+</wsdl:definitions>

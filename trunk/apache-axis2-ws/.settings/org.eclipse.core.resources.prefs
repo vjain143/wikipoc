@@ -1,0 +1,12 @@
+#Sat Sep 10 18:41:46 IST 2011
+eclipse.preferences.version=1
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountInsertRequest.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountInsertResponse.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountSelectRequest.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountSelectResponse.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountServiceSOAPImpl.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountServiceSOAPSkeleton.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountServiceSOAPStub.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountService_PortType.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountService_Service.java=UTF-8
+encoding//src/main/java/com/wiki/poc/AccountSchema/AccountService_ServiceLocator.java=UTF-8

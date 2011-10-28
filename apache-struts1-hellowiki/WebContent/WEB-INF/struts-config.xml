@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="helloWikiForm" 
+				   type="com.wiki.form.HelloWikiForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/hellowiki"
+				type="com.wiki.action.HelloWikiAction"
+				name="helloWikiForm">
+			<forward name="success" path="/hellowiki.jsp"/>			
+		</action>
+	</action-mappings>
+
+</struts-config>

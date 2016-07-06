@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/CustomerSchema" xmlns:tns="http://www.example.org/CustomerSchema" xmlns:vj="http://www.example.org/CustomerSchema"
+elementFormDefault="qualified">
+<element name="CustomerInsertRequest" type="vj:CustomerInsertRequestType"></element>
+
+	<element name="CustomerInsertResponse" type="vj:CustomerInsertResponseType"></element>
+
+
+	<complexType name="CustomerInsertResponseType">
+		<sequence>
+			<element name="status" type="string"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="CustomerInsertRequestType">
+		<sequence>
+			<element name="custId" type="string"></element>
+			<element name="firstName" type="string"></element>
+			<element name="lastName" type="string"></element>
+			<element name="accountID" type="string"></element>
+			<element name="accountType" type="string"></element>
+			<element name="sortCode" type="string"></element>
+		</sequence>
+	</complexType>
+
+    <element name="CustomerSelectRequest" type="vj:CustomerSelectRequestType"></element>
+
+    <complexType name="CustomerSelectRequestType">
+    	<sequence>
+    		<element name="custID" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="CustomerSelectResponse" type="vj:CustomerSelectResponseType"></element>
+
+    <complexType name="CustomerSelectResponseType">
+    	<sequence>
+    		<element name="custId" type="string"></element>
+			<element name="firstName" type="string"></element>
+			<element name="lastName" type="string"></element>
+			<element name="accountID" type="string"></element>
+			<element name="accountType" type="string"></element>
+			<element name="sortCode" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

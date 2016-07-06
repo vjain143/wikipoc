@@ -1,0 +1,54 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CustomerServiceService WSDL service -->
+
+  <service name="CustomerService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.oba.vini.com"/>
+      <parameter name="wsdlServiceElement" value="CustomerServiceService"/>
+      <parameter name="schemaQualified" value="http://dto.oba.vini.com,http://service.oba.vini.com"/>
+      <parameter name="wsdlServicePort" value="CustomerService"/>
+      <parameter name="className" value="com.vini.oba.service.CustomerServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="CustomerService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="updateCustomerData" qname="operNS:updateCustomerData" xmlns:operNS="http://service.oba.vini.com" soapAction="" >
+        <parameter qname="pns:commaSeparated" xmlns:pns="http://service.oba.vini.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="insertCustomerData" qname="operNS:insertCustomerData" xmlns:operNS="http://service.oba.vini.com" soapAction="" >
+        <parameter qname="pns:commaSeparated" xmlns:pns="http://service.oba.vini.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="selectCustomerData" qname="operNS:selectCustomerData" xmlns:operNS="http://service.oba.vini.com" returnQName="retNS:selectCustomerDataReturn" xmlns:retNS="http://service.oba.vini.com" returnType="rtns:CustomerDTO" xmlns:rtns="http://dto.oba.vini.com" soapAction="" >
+        <parameter qname="pns:customerId" xmlns:pns="http://service.oba.vini.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteCustomerData" qname="operNS:deleteCustomerData" xmlns:operNS="http://service.oba.vini.com" soapAction="" >
+        <parameter qname="pns:customerId" xmlns:pns="http://service.oba.vini.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="deleteCustomerData insertCustomerData updateCustomerData selectCustomerData"/>
+
+      <typeMapping
+        xmlns:ns="http://dto.oba.vini.com"
+        qname="ns:CustomerDTO"
+        type="java:com.vini.oba.dto.CustomerDTO"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://dto.oba.vini.com"
+        qname="ns:AccountDTO"
+        type="java:com.vini.oba.dto.AccountDTO"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

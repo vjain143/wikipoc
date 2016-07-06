@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.oba.vini.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.oba.vini.com" xmlns:intf="http://service.oba.vini.com" xmlns:tns1="http://dto.oba.vini.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.oba.vini.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.oba.vini.com"/>
+   <element name="updateCustomerData">
+    <complexType>
+     <sequence>
+      <element name="commaSeparated" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateCustomerDataResponse">
+    <complexType/>
+   </element>
+   <element name="insertCustomerData">
+    <complexType>
+     <sequence>
+      <element name="commaSeparated" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertCustomerDataResponse">
+    <complexType/>
+   </element>
+   <element name="selectCustomerData">
+    <complexType>
+     <sequence>
+      <element name="customerId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="selectCustomerDataResponse">
+    <complexType>
+     <sequence>
+      <element name="selectCustomerDataReturn" type="tns1:CustomerDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteCustomerData">
+    <complexType>
+     <sequence>
+      <element name="customerId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteCustomerDataResponse">
+    <complexType/>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://dto.oba.vini.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="AccountDTO">
+    <sequence>
+     <element name="accountId" nillable="true" type="xsd:string"/>
+     <element name="accountNo" nillable="true" type="xsd:string"/>
+     <element name="sortCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="CustomerDTO">
+    <sequence>
+     <element name="accountDTO" nillable="true" type="tns1:AccountDTO"/>
+     <element name="customerId" nillable="true" type="xsd:string"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="insertCustomerDataRequest">
+
+      <wsdl:part element="impl:insertCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectCustomerDataRequest">
+
+      <wsdl:part element="impl:selectCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectCustomerDataResponse">
+
+      <wsdl:part element="impl:selectCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCustomerDataResponse">
+
+      <wsdl:part element="impl:deleteCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCustomerDataResponse">
+
+      <wsdl:part element="impl:updateCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCustomerDataRequest">
+
+      <wsdl:part element="impl:updateCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertCustomerDataResponse">
+
+      <wsdl:part element="impl:insertCustomerDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCustomerDataRequest">
+
+      <wsdl:part element="impl:deleteCustomerData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CustomerService">
+
+      <wsdl:operation name="updateCustomerData">
+
+         <wsdl:input message="impl:updateCustomerDataRequest" name="updateCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateCustomerDataResponse" name="updateCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertCustomerData">
+
+         <wsdl:input message="impl:insertCustomerDataRequest" name="insertCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:insertCustomerDataResponse" name="insertCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectCustomerData">
+
+         <wsdl:input message="impl:selectCustomerDataRequest" name="selectCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:selectCustomerDataResponse" name="selectCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCustomerData">
+
+         <wsdl:input message="impl:deleteCustomerDataRequest" name="deleteCustomerDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteCustomerDataResponse" name="deleteCustomerDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CustomerServiceSoapBinding" type="impl:CustomerService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="updateCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="insertCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="insertCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="selectCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="selectCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCustomerData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteCustomerDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteCustomerDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CustomerServiceService">
+
+      <wsdl:port binding="impl:CustomerServiceSoapBinding" name="CustomerService">
+
+         <wsdlsoap:address location="http://localhost:8080/vini-open-bank-api-web/services/CustomerService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

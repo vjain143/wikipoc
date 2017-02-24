@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <title>Search</title>
+
+    <style>
+.center { margin: auto; padding: 20px; }
+
+#searchString
+{
+/* background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+/* background-position: 10px 12px; /* Position the search icon */
+/* background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+/*font-size: px; /* Increase font-size */
+/*padding: 12px 20px 12px 40px; /* Add some padding */
+/*border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+#searchResultTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    /*font-size: 18px; /* Increase font-size */
+}
+
+#searchResultTable th, #searchResultTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#searchResultTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#searchResultTable tr.header, #searchResultTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+
+    </style>
+
+    <script>
+function search()
+{
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("searchString");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("searchResultTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function gotoFeedbackPage(selectedValue)
+{
+    var path = "";
+    //alert("Function gotoFeedbackPage = "+selectedValue);
+    $("body").load(path + "pages/Feedback.html");
+}
+
+function loadData()
+{
+
+}
+
+var pagesHistory = [];
+var currentPage = {};
+var path = "";
+
+
+    </script>
+</head>
+<script type="text/javascript" src="js/ratchet.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/feedback.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+
+<body>
+
+<header class="bar">
+    <h1 class="title">Search</h1>
+    <br><br>
+    <div class="center">
+        <input type="text" id="searchString" onkeyup="search()" placeholder="Search">
+
+        <table id="searchResultTable">
+            <tr class="header">
+            </tr>
+            <tr>
+                <td onclick="gotoFeedbackPage('Flat 504 Cutmore, Ropeworks, 1 Arboretum Place, Barking IG11 7GT')">Flat 504 Cutmore, Ropeworks, 1 Arboretum Place, Barking IG11 7GT</td>
+            </tr>
+            <tr>
+                <td onclick="gotoFeedbackPage('47 Charter Avenue, Ilford IG2 7AD')">47 Charter Avenue, Ilford IG2 7AD</td>
+            </tr>
+            <tr>
+                <td onclick="gotoFeedbackPage('71a Horns Road, Ilford IG2 6BN')">71a Horns Road, Ilford IG2 6BN</td>
+            </tr>
+            <tr>
+                <td onclick="gotoFeedbackPage('77 Horns Road, Ilford IG2 6BN')">77 Horns Road, Ilford IG2 6BN</td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+</body>
+</html>

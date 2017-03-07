@@ -1,0 +1,320 @@
+<style>
+.center {
+padding-top: 10px;
+padding-bottom: 30px;
+
+}
+.feedback-bottom {
+padding-bottom: 30px;
+
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.user-rating {
+    direction: rtl;
+    font-size: 20px;
+    unicode-bidi: bidi-override;
+    padding-top: 1px;
+    /*padding-right: 10px;*/
+    padding-bottom: 1px;
+    /*padding-left: 30px;*/
+    display: inline-block;
+}
+.user-rating input {
+    opacity: 0;
+    position: relative;
+    left: -15px;
+    z-index: 2;
+    cursor: pointer;
+}
+.user-rating span.star:before {
+    color: #777777;
+    content:"ï€†";
+    /*padding-right: 5px;*/
+}
+.user-rating span.star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+.user-rating span {
+    margin-left: -15px;
+}
+.user-rating span.star:before {
+    color: #777777;
+    /*content:url(img/black-star.png);*/
+    content:"\f004";
+    /*padding-right: 5px;*/
+}
+.user-rating input:hover + span.star:before, .user-rating input:hover + span.star ~ span.star:before, .user-rating input:checked + span.star:before, .user-rating input:checked + span.star ~ span.star:before {
+    color: #ffd100;
+    /*content:url(img/yellow-star.png);*/
+    content:"\f005";
+}
+
+.selected-rating{
+    color: #ffd100;
+    /*font-weight: bold;
+    font-size: 3em;*/
+}
+</style>
+<script type="text/javascript">
+$.getScript(path + "js/feedback.js");
+
+    /*
+    var selected-rating1 = $('#user-rating-form').on('change','[name="rating1"]',function(){$('#selected-rating1').text($('[name="rating1"]:checked').val());});
+    var selected-rating2 = $('#user-rating-form').on('change','[name="rating2"]',function(){$('#selected-rating2').text($('[name="rating2"]:checked').val());});
+    var selected-rating3 = $('#user-rating-form').on('change','[name="rating3"]',function(){$('#selected-rating3').text($('[name="rating3"]:checked').val());});
+    var selected-rating4 = $('#user-rating-form').on('change','[name="rating4"]',function(){$('#selected-rating4').text($('[name="rating4"]:checked').val());});
+    var selected-rating5 = $('#user-rating-form').on('change','[name="rating5"]',function(){$('#selected-rating5').text($('[name="rating5"]:checked').val());});
+    var selected-rating6 = $('#user-rating-form').on('change','[name="rating6"]',function(){$('#selected-rating6').text($('[name="rating6"]:checked').val());});
+    var selected-rating7 = $('#user-rating-form').on('change','[name="rating7"]',function(){$('#selected-rating7').text($('[name="rating7"]:checked').val());});
+    var selected-rating8 = $('#user-rating-form').on('change','[name="rating8"]',function(){$('#selected-rating8').text($('[name="rating8"]:checked').val());});
+    var selected-rating9 = $('#user-rating-form').on('change','[name="rating9"]',function(){$('#selected-rating9').text($('[name="rating9"]:checked').val());});
+    var selected-rating10 = $('#user-rating-form').on('change','[name="rating10"]',function(){$('#selected-rating10').text($('[name="rating10"]:checked').val());});
+    var selected-rating11 = $('#user-rating-form').on('change','[name="rating11"]',function(){$('#selected-rating11').text($('[name="rating11"]:checked').val());});
+    var selected-rating12 = $('#user-rating-form').on('change','[name="rating12"]',function(){$('#selected-rating12').text($('[name="rating12"]:checked').val());});
+    var selected-rating13 = $('#user-rating-form').on('change','[name="rating13"]',function(){$('#selected-rating13').text($('[name="rating13"]:checked').val());});
+    var selected-rating14 = $('#user-rating-form').on('change','[name="rating14"]',function(){$('#selected-rating14').text($('[name="rating14"]:checked').val());});
+    var selected-rating15 = $('#user-rating-form').on('change','[name="rating15"]',function(){$('#selected-rating15').text($('[name="rating15"]:checked').val());});
+
+    console.log(" "+selected-rating1+" "+selected-rating2+" "+selected-rating3+" "+selected-rating4+" "+selected-rating5+" "+selected-rating6+ );
+    */
+function submitFeedback(){
+    console.log("Inside submitFeedback");
+
+    console.log("Go to ThankYouMessage Page");
+    $("body").load("pages/ThankYouMessage.html");
+
+    /*
+    $.ajax({type: "get",
+            url: "http://demo.feedback.com/feedback/sendRating.php",
+            data: formData,
+            dataType: "json",
+            success: function(data)
+            {
+                alert("Add user success");
+                $("body").load(path + "pages/ThankYouMessage.html", function()
+                {
+                    $.getScript(path + "js/ListPage.js", function()
+                    {
+                        if (currentPage.init)
+                        {
+                            currentPage.init();
+                        }
+                    });
+                });
+            },
+            error: function()
+            {
+                alert("Add user failure");
+            }
+        });
+    */
+}
+
+function gotoUniversitySearchPage()
+{
+    console.log("Go to University Search Page");
+    $("body").load("pages/UniversitySearch.html");
+}
+
+
+
+</script>
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" onclick="gotoUniversitySearchPage()"></a>
+    <h1 class="title">University Feedback</h1>
+</header>
+<div class="content">
+    <div class="center">
+        <table align="center" width="100%">
+            <tr>
+                <td align="center">
+                    <h6>Teacher Friendliness</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating1" value="5"><span class="star"></span>
+                    <input type="radio" name="rating1" value="4"><span class="star"></span>
+                    <input type="radio" name="rating1" value="3"><span class="star"></span>
+                    <input type="radio" name="rating1" value="2"><span class="star"></span>
+                    <input type="radio" name="rating1" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6>Atmosphere</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating2" value="5"><span class="star"></span>
+                    <input type="radio" name="rating2" value="4"><span class="star"></span>
+                    <input type="radio" name="rating2" value="3"><span class="star"></span>
+                    <input type="radio" name="rating2" value="2"><span class="star"></span>
+                    <input type="radio" name="rating2" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Cleanliness</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating3" value="5"><span class="star"></span>
+                    <input type="radio" name="rating3" value="4"><span class="star"></span>
+                    <input type="radio" name="rating3" value="3"><span class="star"></span>
+                    <input type="radio" name="rating3" value="2"><span class="star"></span>
+                    <input type="radio" name="rating3" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> Food</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating4" value="5"><span class="star"></span>
+                    <input type="radio" name="rating4" value="4"><span class="star"></span>
+                    <input type="radio" name="rating4" value="3"><span class="star"></span>
+                    <input type="radio" name="rating4" value="2"><span class="star"></span>
+                    <input type="radio" name="rating4" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Class Environment</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating5" value="5"><span class="star"></span>
+                    <input type="radio" name="rating5" value="4"><span class="star"></span>
+                    <input type="radio" name="rating5" value="3"><span class="star"></span>
+                    <input type="radio" name="rating5" value="2"><span class="star"></span>
+                    <input type="radio" name="rating5" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> Teaching Ability</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating6" value="5"><span class="star"></span>
+                    <input type="radio" name="rating6" value="4"><span class="star"></span>
+                    <input type="radio" name="rating6" value="3"><span class="star"></span>
+                    <input type="radio" name="rating6" value="2"><span class="star"></span>
+                    <input type="radio" name="rating6" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Extra Curricular</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating7" value="5"><span class="star"></span>
+                    <input type="radio" name="rating7" value="4"><span class="star"></span>
+                    <input type="radio" name="rating7" value="3"><span class="star"></span>
+                    <input type="radio" name="rating7" value="2"><span class="star"></span>
+                    <input type="radio" name="rating7" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> IT</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating8" value="5"><span class="star"></span>
+                    <input type="radio" name="rating8" value="4"><span class="star"></span>
+                    <input type="radio" name="rating8" value="3"><span class="star"></span>
+                    <input type="radio" name="rating8" value="2"><span class="star"></span>
+                    <input type="radio" name="rating8" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Receptionist Friendliness</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating9" value="5"><span class="star"></span>
+                    <input type="radio" name="rating9" value="4"><span class="star"></span>
+                    <input type="radio" name="rating9" value="3"><span class="star"></span>
+                    <input type="radio" name="rating9" value="2"><span class="star"></span>
+                    <input type="radio" name="rating9" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> Range of Subjects</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating10" value="5"><span class="star"></span>
+                    <input type="radio" name="rating10" value="4"><span class="star"></span>
+                    <input type="radio" name="rating10" value="3"><span class="star"></span>
+                    <input type="radio" name="rating10" value="2"><span class="star"></span>
+                    <input type="radio" name="rating10" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Happiness</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating11" value="5"><span class="star"></span>
+                    <input type="radio" name="rating11" value="4"><span class="star"></span>
+                    <input type="radio" name="rating11" value="3"><span class="star"></span>
+                    <input type="radio" name="rating11" value="2"><span class="star"></span>
+                    <input type="radio" name="rating11" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> Safety</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating12" value="5"><span class="star"></span>
+                    <input type="radio" name="rating12" value="4"><span class="star"></span>
+                    <input type="radio" name="rating12" value="3"><span class="star"></span>
+                    <input type="radio" name="rating12" value="2"><span class="star"></span>
+                    <input type="radio" name="rating12" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Library</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating13" value="5"><span class="star"></span>
+                    <input type="radio" name="rating13" value="4"><span class="star"></span>
+                    <input type="radio" name="rating13" value="3"><span class="star"></span>
+                    <input type="radio" name="rating13" value="2"><span class="star"></span>
+                    <input type="radio" name="rating13" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td align="center">
+                    <h6> Sports</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating14" value="5"><span class="star"></span>
+                    <input type="radio" name="rating14" value="4"><span class="star"></span>
+                    <input type="radio" name="rating14" value="3"><span class="star"></span>
+                    <input type="radio" name="rating14" value="2"><span class="star"></span>
+                    <input type="radio" name="rating14" value="1"><span class="star"></span>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h6> Student life</h6>
+                <span class="user-rating" align="center">
+                    <input type="radio" name="rating15" value="5"><span class="star"></span>
+                    <input type="radio" name="rating15" value="4"><span class="star"></span>
+                    <input type="radio" name="rating15" value="3"><span class="star"></span>
+                    <input type="radio" name="rating15" value="2"><span class="star"></span>
+                    <input type="radio" name="rating15" value="1"><span class="star"></span>
+                </span>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+        <table class="feedback-bottom" align="center" width="100%">
+            <tr>
+                <td align="center">
+                    <textarea rows="4" cols="100%" placeholder="Write a review"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button class="btn btn-positive btn-block" onclick="submitFeedback();">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

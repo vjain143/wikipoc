@@ -35,7 +35,6 @@ margin-bottom: 12px; /* Add some space below the input */
     background-color: #f1f1f1;
 }
 </style>
-
 <script>
 
 function search()
@@ -47,7 +46,6 @@ function search()
         var inputStringUpperCase = $("#searchString").val().toUpperCase();
         var inputStringWithoutSpace =  inputStringUpperCase.replace(/\s/g, "");
         var inputValue = inputStringWithoutSpace;
-
         var ct = 0
         $.each(schooldata.schools, function(i, v)
         {

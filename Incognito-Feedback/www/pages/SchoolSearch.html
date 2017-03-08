@@ -45,11 +45,14 @@ function search()
         $("#searchResultTable tr").remove();
         var tableRows = "";
         var inputStringUpperCase = $("#searchString").val().toUpperCase();
-        var inputValue = inputStringUpperCase;
+        var inputStringWithoutSpace =  inputStringUpperCase.replace(/\s/g, "");
+        var inputValue = inputStringWithoutSpace;
+
         var ct = 0
         $.each(schooldata.schools, function(i, v)
         {
-            if (v.Postcode.search(new RegExp(inputValue)) != -1)
+            var postCodeFile = (v.Postcode).replace(/\s/g, "");
+            if (postCodeFile.search(new RegExp(inputValue)) != -1)
             {
                 ct++
                 //alert( v.SchoolName );
@@ -95,7 +98,7 @@ function loadIndex()
 </header>
 <div class="content">
     <div class="center">
-        <input id="searchString" type="text" placeholder="Search">
+        <input id="searchString" type="text" placeholder="Search by Postcode" >
         <button id="searchButton" class="btn btn-positive btn-block" onclick="search()">Search</button><br>
         <table id="searchResultTable">
         </table>

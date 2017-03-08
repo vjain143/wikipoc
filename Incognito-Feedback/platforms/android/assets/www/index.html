@@ -10,6 +10,17 @@
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" href="css/ratchet.min.css">
+    <style>
+        .indexdiv {
+                position:absolute; height:100%; width:100%;
+                display: table;
+            }
+        .indexh4 {
+                display: table-cell;
+                vertical-align: middle;
+                text-align:center;
+        }
+     </style>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/ratchet.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -59,17 +70,34 @@
             });
         }
 
+        $(window).load(function()
+        {
+            centerContent();
+        });
+
+        $(window).resize(function()
+        {
+            centerContent();
+        });
+
+        function centerContent()
+        {
+            var container = $('#container');
+            var content = $('#content');
+            content.css("left", (container.width()-content.width())/2);
+            content.css("top", (container.height()-content.height())/2);
+        }
     </script>
 
 </head>
 <body onload="init()">
-<div class="content-padded" align="center" >
-    <h4>
-        Anonymously rate your
-        <a onclick="loadSchool();">school</a>,
-        <a onclick="loadCollege();">college</a> and
-        <a onclick="loadUniversity();">university</a>
-    </h4>
+<div class="content-padded indexdiv" align="center">
+<h4 class="indexh4">
+    Anonymously rate your<br>
+    <a onclick="loadSchool();">school</a>,
+    <a onclick="loadCollege();">college</a> and
+    <a onclick="loadUniversity();">university</a>
+</h4>
 </div>
 </body>
 </html>

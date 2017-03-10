@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="silent-secret-bot" />
         <module name="SilentSecretBot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="silent-secret-bot" target="1.5" />
       <module name="SilentSecretBot" target="1.5" />
     </bytecodeTargetLevel>
   </component>

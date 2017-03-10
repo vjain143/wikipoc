@@ -1,0 +1,51 @@
+<script type="text/javascript">
+function property4Sale()
+{
+    $("body").load("pages/Property4Sale.html")
+}
+
+function property4Rent()
+{
+    $("body").load("pages/Property4Rent.html")
+}
+</script>
+<header class="bar bar-nav">
+    <h1 class="title">Home</h1>
+</header>
+<div class="content">
+    <div class="content-padded">
+        <ul class="table-view">
+            <li class="table-view-cell">
+                <a class="navigate-right" onclick="property4Sale()">I am looking to buy a house</a>
+            </li>
+            <li class="table-view-cell">
+                <a class="navigate-right" onclick="property4Rent()">I am looking to rent a house</a>
+            </li>
+            <li class="table-view-cell">
+                <a class="navigate-right">I'm curious show me house value</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<nav class="bar bar-tab">
+    <a class="tab-item active" onclick="gotoHome()">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Profile</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-star-filled"></span>
+        <span class="tab-label">Favorites</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Search</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-gear"></span>
+        <span class="tab-label">Settings</span>
+    </a>
+</nav>

@@ -1,0 +1,53 @@
+<style>
+#image {
+    width:100%;
+    height:500px;
+    position:relative;
+}
+#image img {
+    width:100%;
+    height:500px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+</style>
+
+<script type="text/javascript">
+</script>
+
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" onclick="gotoAOPStatus()"></a>
+    <h1 class="title">AOP Download</h1>
+</header>
+<div class="content">
+    <div class="content-padded">
+            <div class="image">
+                    <img src="img/AOP-PDF.png" />
+            </div>
+    </div>
+    <button class="btn btn-positive btn-block" onclick="checkAffordability()">Download</button>
+</div>
+
+<nav class="bar bar-tab">
+    <a class="tab-item active" onclick="gotoHome()">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Profile</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-star-filled"></span>
+        <span class="tab-label">Favorites</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Search</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-gear"></span>
+        <span class="tab-label">Settings</span>
+    </a>
+</nav>

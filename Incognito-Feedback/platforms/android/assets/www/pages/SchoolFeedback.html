@@ -15,12 +15,12 @@ table {
 
 .user-rating {
     direction: rtl;
-    font-size: 20px;
+    font-size: 10px;
     unicode-bidi: bidi-override;
     padding-top: 1px;
     /*padding-right: 10px;*/
     padding-bottom: 1px;
-    /*padding-left: 30px;*/
+    padding-left: 30px;
     display: inline-block;
 }
 .user-rating input {
@@ -47,16 +47,17 @@ table {
     margin-left: -15px;
 }
 .user-rating span.star:before {
+    font-family: 'FontAwesome';
     color: #777777;
-    /*content:url(img/black-star.png);*/
-    content:"\f004";
-    /*padding-right: 5px;*/
+    content:"\f006";
+    padding-right: 5px;
+
 }
 .user-rating input:hover + span.star:before, .user-rating input:hover + span.star ~ span.star:before, .user-rating input:checked + span.star:before, .user-rating input:checked + span.star ~ span.star:before {
+    font-family: 'FontAwesome';
     color: #ffd100;
-    /*content:url(img/yellow-star.png);*/
-    content:"\f005";
-}
+    content: "\f005";
+
 
 .selected-rating{
     color: #ffd100;
@@ -134,10 +135,10 @@ function gotoSearchPage()
 </header>
 <div class="content">
         <div class="center">
-            <table align="center" width="100%">
+            <table align="center" width="90%">
                 <tr>
-                    <td align="center">
-                        <h6>Teacher Friendliness</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Teacher Friendliness<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating1" value="5"><span class="star"></span>
                     <input type="radio" name="rating1" value="4"><span class="star"></span>
@@ -146,8 +147,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating1" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6>Atmosphere</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Atmosphere<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating2" value="5"><span class="star"></span>
                     <input type="radio" name="rating2" value="4"><span class="star"></span>
@@ -158,8 +159,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Cleanliness</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Cleanliness<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating3" value="5"><span class="star"></span>
                     <input type="radio" name="rating3" value="4"><span class="star"></span>
@@ -168,8 +169,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating3" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> Food</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Food<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating4" value="5"><span class="star"></span>
                     <input type="radio" name="rating4" value="4"><span class="star"></span>
@@ -180,8 +181,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Class Environment</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Class Environment<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating5" value="5"><span class="star"></span>
                     <input type="radio" name="rating5" value="4"><span class="star"></span>
@@ -190,8 +191,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating5" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> Teaching Ability</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Teaching Ability<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating6" value="5"><span class="star"></span>
                     <input type="radio" name="rating6" value="4"><span class="star"></span>
@@ -202,8 +203,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Extra Curricular</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Extra Curricular<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating7" value="5"><span class="star"></span>
                     <input type="radio" name="rating7" value="4"><span class="star"></span>
@@ -212,8 +213,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating7" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> IT</h6>
+                    <td align="center" style="font-size: 12px;">
+                        IT<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating8" value="5"><span class="star"></span>
                     <input type="radio" name="rating8" value="4"><span class="star"></span>
@@ -224,8 +225,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Receptionist Friendliness</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Receptionist Friendliness<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating9" value="5"><span class="star"></span>
                     <input type="radio" name="rating9" value="4"><span class="star"></span>
@@ -234,8 +235,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating9" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> Range of Subjects</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Range of Subjects<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating10" value="5"><span class="star"></span>
                     <input type="radio" name="rating10" value="4"><span class="star"></span>
@@ -246,8 +247,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Happiness</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Happiness<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating11" value="5"><span class="star"></span>
                     <input type="radio" name="rating11" value="4"><span class="star"></span>
@@ -256,8 +257,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating11" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> Safety</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Safety<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating12" value="5"><span class="star"></span>
                     <input type="radio" name="rating12" value="4"><span class="star"></span>
@@ -268,8 +269,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Library</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Library<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating13" value="5"><span class="star"></span>
                     <input type="radio" name="rating13" value="4"><span class="star"></span>
@@ -278,8 +279,8 @@ function gotoSearchPage()
                     <input type="radio" name="rating13" value="1"><span class="star"></span>
                 </span>
                     </td>
-                    <td align="center">
-                        <h6> Sports</h6>
+                    <td align="center" style="font-size: 12px;" bgcolor="#DADBD9">
+                        Sports<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating14" value="5"><span class="star"></span>
                     <input type="radio" name="rating14" value="4"><span class="star"></span>
@@ -290,8 +291,8 @@ function gotoSearchPage()
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <h6> Student life</h6>
+                    <td align="center" style="font-size: 12px;">
+                        Student life<br>
                 <span class="user-rating" align="center">
                     <input type="radio" name="rating15" value="5"><span class="star"></span>
                     <input type="radio" name="rating15" value="4"><span class="star"></span>
@@ -304,10 +305,11 @@ function gotoSearchPage()
                     </td>
                 </tr>
             </table>
-            <table class="feedback-bottom" align="center" width="100%">
+            <br>
+            <table class="feedback-bottom" align="center" width="90%">
                 <tr>
                     <td align="center">
-                        <textarea rows="4" cols="100%" placeholder="Write a review"></textarea>
+                        <textarea rows="4" cols="100%" placeholder=" Write a review "  style="font-size: 12px;"></textarea>
                     </td>
                 </tr>
                 <tr>

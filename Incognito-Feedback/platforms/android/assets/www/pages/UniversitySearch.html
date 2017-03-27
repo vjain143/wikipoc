@@ -59,7 +59,11 @@ function searchUniversity()
                 return;
             }
         });
-         $("body").append("There are "+ct+" result(s)");
+        if(ct == 0 )
+         {
+            tableRows+= "<tr><td>We did not find any results for your postcode '"+inputStringUpperCase+"'</td></tr>";
+         }
+         //$("body").append("There are "+ct+" result(s)");
          $("#searchResultTable").append(tableRows);
     return false
     }
@@ -93,11 +97,11 @@ function loadIndex()
 </script>
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" onclick="loadIndex()"></a>
-    <h1 class="title">University Search</h1>
+    <h1 class="title">Search</h1>
 </header>
 <div class="content">
     <div class="center">
-        <input id="searchString" type="text" placeholder="Search by Postcode">
+        <input id="searchString" type="text" placeholder="Search University by Postcode">
         <button id="searchButton" class="btn btn-positive btn-block" onclick="searchUniversity()">Search</button><br>
         <table id="searchResultTable">
         </table>

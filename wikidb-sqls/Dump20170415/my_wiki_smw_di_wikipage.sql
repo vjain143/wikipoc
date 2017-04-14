@@ -1,0 +1,56 @@
+CREATE DATABASE  IF NOT EXISTS `my_wiki` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `my_wiki`;
+-- MySQL dump 10.13  Distrib 5.5.53, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: my_wiki
+-- ------------------------------------------------------
+-- Server version	5.5.53-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `smw_di_wikipage`
+--
+
+DROP TABLE IF EXISTS `smw_di_wikipage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `smw_di_wikipage` (
+  `s_id` int(8) unsigned NOT NULL,
+  `p_id` int(8) unsigned NOT NULL,
+  `o_id` int(8) unsigned DEFAULT NULL,
+  KEY `s_id` (`s_id`,`p_id`),
+  KEY `p_id` (`p_id`,`o_id`),
+  KEY `o_id` (`o_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=binary;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `smw_di_wikipage`
+--
+
+LOCK TABLES `smw_di_wikipage` WRITE;
+/*!40000 ALTER TABLE `smw_di_wikipage` DISABLE KEYS */;
+INSERT INTO `smw_di_wikipage` VALUES (160,180,181),(160,182,183),(160,182,184),(160,182,185),(160,186,187),(160,22,191),(160,192,193),(157,180,181),(157,186,187),(157,192,194),(158,180,181),(158,191,195),(158,182,196),(158,182,197),(158,182,198),(158,186,187),(158,192,202),(155,180,181),(155,191,203),(155,182,204),(155,182,196),(155,186,187),(155,192,207),(161,180,181),(161,182,183),(161,182,184),(161,182,208),(161,182,209),(161,182,210),(161,182,211),(161,212,213),(161,186,187),(161,22,191),(161,192,193);
+/*!40000 ALTER TABLE `smw_di_wikipage` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-04-15  0:34:27

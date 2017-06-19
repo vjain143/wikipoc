@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-	<faultcode>SOAP-ENV:Client</faultcode>
-	<faultstring xml:lang="en">Departure and destination airport has to differ.</faultstring>
-</SOAP-ENV:Fault>

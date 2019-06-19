@@ -8,7 +8,7 @@
 * Start Jenkins using systemctl <br>
   sudo systemctl start jenkins
 * systemctl doesn't display output, you can use its status command to verify that Jenkins started successfully: <br>
-  sudo systemctl start jenkins
+  sudo systemctl status jenkins
  * Opening the Firewall <br>
   sudo ufw allow 8080
  * Check ufw's status to confirm the new rules: <br>

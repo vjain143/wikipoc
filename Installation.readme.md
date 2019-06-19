@@ -17,9 +17,9 @@
 # Setup Jenkins for very first time 
 * To set up your installation, visit Jenkins on its default port, 8080<br>
   http://localhost:8080
-* You should see the Unlock Jenkins screen, which displays the location of the initial password, In the terminal window, use the cat command to display the password
+* You should see the Unlock Jenkins screen, which displays the location of the initial password, In the terminal window, use the cat command to display the password<br>
   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-* The next screen presents the option of installing suggested plugins or selecting specific plugins. We'll click the Install suggested plugins option, which will immediately begin the installation process: 
-* Create First Admin user
+* The next screen presents the option of installing suggested plugins or selecting specific plugins. We'll click the Install suggested plugins option, which will immediately begin the installation process: <br>
+* Create First Admin user<br>
   Enter the name and password for your user
-* Click Start using Jenkins to visit the main Jenkins dashboard
+* Click Start using Jenkins to visit the main Jenkins dashboard<br>

@@ -23,3 +23,14 @@
 * Create First Admin user<br>
   Enter the name and password for your user
 * Click Start using Jenkins to visit the main Jenkins dashboard<br>
+
+# Modify Jenkins as per your need
+* Change default port(8080) to any other port(9090)<br>
+  sudo vi /etc/default/jenkins<br>
+  The only place you need to change is:<br>
+  #port for HTTP connector (default 8080; disable with -1)<br>
+  HTTP_PORT = 8080<br>
+  There you change to the desired port. For example:<br>
+  HTTP_PORT = 8081<br>
+  Finally, run this command:<br>
+  sudo service jenkins restart<br>

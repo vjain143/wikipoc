@@ -13,6 +13,31 @@ For Example:
     * Request goes to Farms broker
     * Request goes to consignment
     * Request goes to Posten for delivery charge calculation
+* What was the architecture
+This was layered architecture 
+* On the Top we have Frontend WCS (Websphere Commerce System) 
+* Middle we have Integration system 
+* And on bottom layer of the architecture we have country specific system.
+* What approach you followed
+We have 4 story here for this project and we did timeboxing of each
+1.	We have approached the frontend system to know what are the input and output they need from end system
+2	Then we approached end system to know the requested input output and the format of data and data complexity and relationship with in.
+3	Is there any flow already fetching same data set from end system? No
+So, we have designed this integration flow from scratch
+4	Unit Testing and fixing the mismatch and gaps                 
+
+* Why did only this approach
+This this approach we can easily able to identify the work and completion based on time box
+
+* How big was your team
+Agile Team - 9
+2 Frontend Developer to implement the change in frontend – 1 at offshore
+3 Integration (Myself) - 2 at offshore
+2 End System 
+2 Tester – 1 at offshore
+
+* What role you were playing
+Integration Lead/Developer
 
 * Example:
 

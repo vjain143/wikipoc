@@ -7,12 +7,12 @@ It was difficult to manage, if any change in product or services, it had to be u
 For Example: 
 * (R) So, after integrating to boos BCM, system was organized and overhead of updating it everywhere get minimized.
 * Workflow:
- * Prerequisite: IMI system provides product, price and stock information to WCS
- * User requests goes to WCS (Websphere Commerce System)
- * WCS send check inventory request and place order
-  * Request goes to Farms broker
-  * Request goes to consignment
-  * Request goes to Posten for delivery charge calculation
+  * Prerequisite: IMI system provides product, price and stock information to WCS
+  * User requests goes to WCS (Websphere Commerce System)
+  * WCS send check inventory request and place order
+   * Request goes to Farms broker
+   * Request goes to consignment
+   * Request goes to Posten for delivery charge calculation
 
 * Example:
 

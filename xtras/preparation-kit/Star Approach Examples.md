@@ -36,8 +36,8 @@ Treasury & Securities Services - DDA (Demand Deposit Account) provides the metho
 * (A)
 * (R)
 * Example:
-* Error Framework
-* Logging Framwork
+  * Error Framework
+  * Logging Framwork
 
 # Project 
 EAI Libra Package 6 - Alcatel Lucent EAI Libra Package 6 team provides EAI solutions for the integration of Alcatel-Lucent’s diverse applications within the enterprise and the trading partners. Our team helps ALU in streamlining and smooth functioning of its applications and processes across the countries.

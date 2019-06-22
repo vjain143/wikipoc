@@ -1,9 +1,19 @@
 # Project 
 Boots Contract Manufacturing (BCM) has undertaken a transformation program, to create an organization that has a set of consistent process and ways of working across the entire organization in all geographic locations. This project manages the business transition of the organization’s base IT technology and operations.
-* (S)
-* (T)
-* (A)
-* (R)
+* (S) Boots has different IT system for all counties across Europe
+It was difficult to manage, if any change in product or services, it had to be updated separately for each country for entire organization.
+* (T) Task was to streamline the process to make all its system across organization to connect to BCM. So, that if there is a change in product or services, it will be updated at BCM and will be applied all across the organization
+* (A) BCM introduced integration to solve this. So now using the integration, all the systems and depts were made to talk to each other and share the data 
+For Example: 
+* (R) So, after integrating to boos BCM, system was organized and overhead of updating it everywhere get minimized.
+* Workflow:
+ * Prerequisite: IMI system provides product, price and stock information to WCS
+ * User requests goes to WCS (Websphere Commerce System)
+ * WCS send check inventory request and place order
+  * Request goes to Farms broker
+  * Request goes to consignment
+  * Request goes to Posten for delivery charge calculation
+
 * Example:
 
 # Project 

@@ -10,9 +10,9 @@ For Example:
   * Prerequisite: IMI system provides product, price and stock information to WCS
   * User requests goes to WCS (Websphere Commerce System)
   * WCS send check inventory request and place order
-   1 Request goes to Farms broker
-   2 Request goes to consignment
-   3 Request goes to Posten for delivery charge calculation
+    * Request goes to Farms broker
+    * Request goes to consignment
+    * Request goes to Posten for delivery charge calculation
 
 * Example:
 

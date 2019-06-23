@@ -58,11 +58,24 @@ SFDC - GE Healthcare aiming for transformation in medical technologies and servi
 * Example:
 
 # Project
-Lending Process Application (LPA) - LPA project is to simplify the lending process of PNC.  It includes remove multi step complex process for lending application. Due to this lending process lifecycle is higher than other competitor banks.  Using integration, we have reduced point to point interaction for each step and used parallel steps wherever possible, though this solution we have simplified lending process lifecycle.                                                                         * (S)
-* (T)
-* (A)
-* (R)                      
-* Example:
+Lending Process Application (LPA) - LPA project is to simplify the lending process of XYZ.  It includes remove multi step complex process for lending application. Due to this lending process lifecycle is higher than other competitor banks.  Using integration, we have reduced point to point interaction for each step and used parallel steps wherever possible, though this solution we have simplified lending process lifecycle.                                                                         * (S) Bank has very lengthy leding process and most of steps are manual, due to this customer are moving to other competitor for lending.
+* (T) We have to understand the pain point of the steps. Time to market, Automation of manual steps.
+* (A) We have simplify existing application in small unit of components/microservices. Added parallel steps, for example credit check, profile check, property check, also included automation beetween the steps (Workflow)
+* (R) After this enhacement, lending application requests are dramatically increase in the bank.                     
+* Example: Created few Microservices
+  * lend ammount calculator  : to calculate how much i can lend (CRUD)
+  * lending application : start a application for lending  (CRUD)
+  * lending products : what are lending product after by bank, home loan/ persoanl loan etc (CRUD)
+  * lending customer profile : customer service to take care of customer data and his interest (CRUD)
+* How big was your team
+  * Agile Team - 9
+  * 2 Frontend Developer to implement the change in frontend – 1 at offshore
+  * 3 Microservice developer (Myself) - 2 at offshore
+  * 2 End System 
+  * 2 Tester – 1 at offshore
+* What role you were playing
+  Integration/Jav Developer
+
 
 # Project
 Treasury & Securities Services - DDA (Demand Deposit Account) provides the method to clients of JPMC to make payment, receive deposit and manage cash flow. This type of account is also commonly known as current account or a cash account.  A DDA is Core product for JPMC client and provide the gateways into many other treasury products. We have limited End of the day capability, and we have complicated model relies on separate systems. So, through integration we have provided Full-Intra-Day capabilities. Our clients can get complete, accurate and timely data, as well as other LOBs and functional group. 

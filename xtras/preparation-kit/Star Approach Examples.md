@@ -26,15 +26,15 @@ We have 4 story here for this project and we did timeboxing of each
 So, we have designed this integration flow from scratch
 4	Unit Testing and fixing the mismatch and gaps                 
 
-* Why did only this approach
+* Why did only this approach<br>
 This this approach we can easily able to identify the work and completion based on time box
 
 * How big was your team
-Agile Team - 9
-2 Frontend Developer to implement the change in frontend – 1 at offshore
-3 Integration (Myself) - 2 at offshore
-2 End System 
-2 Tester – 1 at offshore
+  * Agile Team - 9
+  * 2 Frontend Developer to implement the change in frontend – 1 at offshore
+  * 3 Integration (Myself) - 2 at offshore
+  * 2 End System 
+  * 2 Tester – 1 at offshore
 
 * What role you were playing
 Integration Lead/Developer

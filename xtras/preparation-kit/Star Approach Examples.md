@@ -96,12 +96,14 @@ EAI Libra Package 6 - Alcatel Lucent EAI Libra Package 6 team provides EAI solut
 * Example:
 
 # Project 
-Integrated Services Platform (ISP) - This is the first major strategic initiative to use a comprehensive Services Oriented Architecture approach to integration in Dell. The ISP program is to deploy Siebel as the new global CRM tool at Dell
-* (S) Dell has few legecy system, have limited functionality like scaling the systm integration with 3rd party system etc. due to this legecy system was isolated and very difficult to implement any functionality. 
-* (T) Dell interduced a new system Sibel CRM and integration 
-* (A)
-* (R)
-* Example:
+Integrated Services Platform (ISP) - This is the first major strategic initiative to use a comprehensive Services Oriented Architecture approach to integration in Dell. The ISP program is to deploy Siebel as the new global CRM tool at Dell
+* (S) Dell has few legacy system, have limited functionality like scaling the system integration with 3rd party system etc. due to this legecy system was isolated and very difficult to implement any functionality. 
+* (T) Dell introduced a new system Sibel CRM and want us to implement integration between them, so that legacy system and new system share the responsibility together.  
+* (A) We have develope the SOAP service between them, which was on SOA architecture style, so both system can have integration using SOAP service.
+* (R) We have connected isolated system through SOAP with SOAP Web Service integration, This help them to integrate system with other 3rd party systems.
+* Example: Created Few Soap Services
+  * Product - CURD SOAP Operation 
+  * Service - CURD SOAP Operation 
 
 # Project 
 ACS - Comcast provides a customer-facing post-sale portal, which serves as a single location to get information about upgraded or value-added service offerings, as well as access to their Business-Class Webmail, including business-related news and journals and an FAQ section intended to reduce the effort on to the existing technical support and customer service. 

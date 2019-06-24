@@ -48,6 +48,9 @@ XYZ-Recruitment project is to improve the candidate journey of the potential emp
 * (A) XYZ introduced integration/microservices beetween Portal and database.
 * (R) Using this solution(integration/microservices) their job portal was improved and user were able to search and apply job easily
 * Example:
+  * Jobs Microservice : To read/get, create, update and delete jobs. Use by user and admin.
+  * Application Microservice : use by user to create application, use by admin to get submitted application..
+  * User Microservice : All CRUD operations.
 
 # Project 
 SFDC - GE Healthcare aiming for transformation in medical technologies and services that are shaping a new age of patient care. This project is to streamline business function and provide integration for smooth functioning of its applications(salesforce) and processes across the countries. 
@@ -75,7 +78,6 @@ Lending Process Application (LPA) - LPA project is to simplify the lending proce
   * 2 Tester – 1 at offshore
 * What role you were playing
   Integration/Jav Developer
-
 
 # Project
 Treasury & Securities Services - DDA (Demand Deposit Account) provides the method to clients of JPMC to make payment, receive deposit and manage cash flow. This type of account is also commonly known as current account or a cash account.  A DDA is Core product for JPMC client and provide the gateways into many other treasury products. We have limited End of the day capability, and we have complicated model relies on separate systems. So, through integration we have provided Full-Intra-Day capabilities. Our clients can get complete, accurate and timely data, as well as other LOBs and functional group. 

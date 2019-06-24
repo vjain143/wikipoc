@@ -44,9 +44,9 @@ Integration Lead/Developer
 # Project 
 XYZ-Recruitment project is to improve the candidate journey of the potential employees who search for and subsequently apply for jobs on the XYZ’s Online Recruitment Portal, which was consists of Oracle DB and XYZ’s Jobs website. 
 * (S) XYZ's Online Recruitment Application was consist of Oracle Database and XYZ's Job website. System is lacking with various capabilities like integration, scalingup, UI user friendlyness. Also User interface and Database are very tight cupled. For example user can get data base errors on UI. 
-* (T) I was given to improve the 
-* (A)
-* (R)
+* (T) I was given to remove tight coupling beetween the system and simplify the design and development. Also to improve the candidate journey of the user, who search and apply for job on portal.
+* (A) XYZ introduced integration/microservices beetween Portal and database.
+* (R) Using this solution(integration/microservices) their job portal was improved and user were able to search and apply job easily
 * Example:
 
 # Project 

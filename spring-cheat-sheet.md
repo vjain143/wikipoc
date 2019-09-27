@@ -3,7 +3,7 @@ This repository contain java technology and framework related project. In other 
 
 # How to send email suing Spring
 
-@Configuration 
+```@Configuration 
 public class MailConfig {
 
     @Value("${email.host}")
@@ -33,3 +33,4 @@ public class MailConfig {
         return properties;
     }
 }
+```

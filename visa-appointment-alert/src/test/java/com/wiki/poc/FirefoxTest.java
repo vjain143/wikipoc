@@ -21,9 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by haozuo on 3/23/16.
- */
 public class FirefoxTest {
 
     private String testUrl;

@@ -5,7 +5,7 @@ It was difficult to manage, if any change in product or services, it had to be u
 * (T) Task was to streamline the process to make all its system across organization to connect to BCM. So, that if there is a change in product or services, it will be updated at BCM and will be applied all across the organization
 * (A) BCM introduced integration to solve this. So now using the integration, all the systems and depts were made to talk to each other and share the data 
 For Example: 
-* (R) So, after integrating to boos BCM, system was organized and overhead of updating it everywhere get minimized.
+* (R) So, after integrating to boots BCM, system was organized and overhead of updating it everywhere get minimized.
 * Workflow:
   * Prerequisite: IMI system provides product, price and stock information to WCS
   * User requests goes to WCS (Websphere Commerce System)
@@ -19,7 +19,7 @@ This was layered architecture
 * Middle we have Integration system 
 * And on bottom layer of the architecture we have country specific system.
 * What approach you followed
-We have 4 story here for this project and we did timeboxing of each
+We have 4 story here for this project, and we did time-box of each
 1.	We have approached the frontend system to know what are the input and output they need from end system
 2	Then we approached end system to know the requested input output and the format of data and data complexity and relationship with in.
 3	Is there any flow already fetching same data set from end system? No
@@ -43,9 +43,9 @@ Integration Lead/Developer
 
 # Project 
 XYZ-Recruitment project is to improve the candidate journey of the potential employees who search for and subsequently apply for jobs on the XYZ’s Online Recruitment Portal, which was consists of Oracle DB and XYZ’s Jobs website. 
-* (S) XYZ's Online Recruitment Application was consist of Oracle Database and XYZ's Job website. System is lacking with various capabilities like integration, scalingup, UI user friendlyness. Also User interface and Database are very tight cupled. For example user can get data base errors on UI. 
-* (T) I was given to remove tight coupling beetween the system and simplify the design and development. Also to improve the candidate journey of the user, who search and apply for job on portal.
-* (A) XYZ introduced integration/microservices beetween Portal and database.
+* (S) XYZ's Online Recruitment Application was consist of Oracle Database and XYZ's Job website. System is lacking with various capabilities like integration, scaling-up, UI user friendliness. Also, User interface and Database are very tight cupled. For example user can get database errors on UI. 
+* (T) I was given to remove tight coupling between the system and simplify the design and development. Also to improve the candidate journey of the user, who search and apply for job on portal.
+* (A) XYZ introduced integration/microservices between Portal and database.
 * (R) Using this solution(integration/microservices) their job portal was improved and user were able to search and apply job easily
 * Example:
   * Jobs Microservice : To read/get, create, update and delete jobs. Use by user and admin.
@@ -61,12 +61,12 @@ SFDC - GE Healthcare aiming for transformation in medical technologies and servi
 * Example:
 
 # Project
-Lending Process Application (LPA) - LPA project is to simplify the lending process of XYZ.  It includes remove multi step complex process for lending application. Due to this lending process lifecycle is higher than other competitor banks.  Using integration, we have reduced point to point interaction for each step and used parallel steps wherever possible, though this solution we have simplified lending process lifecycle.                                                                         * (S) Bank has very lengthy leding process and most of steps are manual, due to this customer are moving to other competitor for lending.
+Lending Process Application (LPA) - LPA project is to simplify the lending process of XYZ.  It includes remove multistep complex process for lending application. Due to this lending process lifecycle is higher than other competitor banks.  Using integration, we have reduced point to point interaction for each step and used parallel steps wherever possible, though this solution we have simplified lending process lifecycle.                                                                         * (S) Bank has very lengthy leding process and most of steps are manual, due to this customer are moving to other competitor for lending.
 * (T) We have to understand the pain point of the steps. Time to market, Automation of manual steps.
-* (A) We have simplify existing application in small unit of components/microservices. Added parallel steps, for example credit check, profile check, property check, also included automation beetween the steps (Workflow)
-* (R) After this enhacement, lending application requests are dramatically increase in the bank.                     
+* (A) We have simplified existing application in small unit of components/microservices. Added parallel steps, for example credit check, profile check, property check, also included automation beetween the steps (Workflow)
+* (R) After this enhancement, lending application requests are dramatically increase in the bank.                     
 * Example: Created few Microservices
-  * lend ammount calculator  : to calculate how much i can lend (CRUD)
+  * lend amount calculator  : to calculate how much i can lend (CRUD)
   * lending application : start a application for lending  (CRUD)
   * lending products : what are lending product after by bank, home loan/ persoanl loan etc (CRUD)
   * lending customer profile : customer service to take care of customer data and his interest (CRUD)
@@ -101,7 +101,7 @@ EAI Libra Package 6 - Alcatel Lucent EAI Libra Package 6 team provides EAI solut
 Integrated Services Platform (ISP) - This is the first major strategic initiative to use a comprehensive Services Oriented Architecture approach to integration in Dell. The ISP program is to deploy Siebel as the new global CRM tool at Dell
 * (S) Dell has few legacy system, have limited functionality like scaling the system integration with 3rd party system etc. due to this legecy system was isolated and very difficult to implement any functionality. 
 * (T) Dell introduced a new system Sibel CRM and want us to implement integration between them, so that legacy system and new system share the responsibility together.  
-* (A) We have develope the SOAP service between them, which was on SOA architecture style, so both system can have integration using SOAP service.
+* (A) We have develop the SOAP service between them, which was on SOA architecture style, so both system can have integration using SOAP service.
 * (R) We have connected isolated system through SOAP with SOAP Web Service integration, This help them to integrate system with other 3rd party systems.
 * Example: Created Few Soap Services
   * Product - CURD SOAP Operation 

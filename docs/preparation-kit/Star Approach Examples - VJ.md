@@ -1,13 +1,22 @@
 # Project 
 XYZ Data Management has undertaken a transformation program, to create an central place to collect and provide data across the entire organization in all geographic locations
 
-* (S) 
- This project manages the all type of data for all lob's IT technology and operations.
-We dont have datamodels of any domain, so unable to understand what are the critical data elements and how to map them to industry, Mapping with vendor tool and understand and map jpmc ontologies and term and entiries is dfficult. We dont have model, we dont have system, we dont have data. 
-* (T) Task was to streamline the process to make all its system across organization to connect to BCM. So, that if there is a change in product or services, it will be updated at BCM and will be applied all across the organization
-* (A) BCM introduced integration to solve this. So now using the integration, all the systems and depts were made to talk to each other and share the data 
-For Example: 
-* (R) So, after integrating to boos BCM, system was organized and overhead of updating it everywhere get minimized.
+* (S)
+  * This project manages the all type of data for all lob's IT technology and operations. 
+  * I do not have conceptual level understanding when I started
+  * I don't have data models of any domain, so unable to understand what are the critical data elements and how to map them to industry data model
+  * Do not have any understanding of Data mapping across different vendor tools (fireeye, reveringlab, fortify, quayles, virus total ) and don't have a common answer
+    * Scanning tools
+    * vulnerabilities databases (mitre, nvd, whitesource)
+  * I do not have data in one place to make them meaningful, most of the system are in system to system integration/connections. 
+    * I do not have proper channels to pull and push data and make them meaningful
+* (T) Task was to streamline the process to make all its system across organization to connect seamlessly. 
+  * So, risk across the organization can be identified quickly and remediation can be possible prior to time.
+* (A) I started with conceptual model, how the domain and entity looks in to ecosystem
+  * I go little down I have logical data model with entities and attribute and the relationship between them
+    * I go down little-bit can have the structure data, and can know which data is important based on geolocation and regulatory requirement and geo restrictions
+    * Now comes to engineering, how to make that data available, so we created data lake to have any sort of data init.
+* (R) So, after integrating to boots BCM, system was organized and overhead of updating it everywhere get minimized.
 * Workflow:
   * Prerequisite: IMI system provides product, price and stock information to WCS
   * User requests goes to WCS (Websphere Commerce System)

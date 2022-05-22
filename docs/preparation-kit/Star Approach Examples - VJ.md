@@ -1,7 +1,9 @@
 # Project 
-XYZ Contract Manufacturing has undertaken a transformation program, to create an organization that has a set of consistent process and ways of working across the entire organization in all geographic locations. This project manages the business transition of the organization’s base IT technology and operations.
-* (S) XYZ has different IT system for all counties across Europe
-It was difficult to manage, if any change in product or services, it had to be updated separately for each country for entire organization.
+XYZ Data Management has undertaken a transformation program, to create an central place to collect and provide data across the entire organization in all geographic locations
+
+* (S) 
+ This project manages the all type of data for all lob's IT technology and operations.
+We dont have datamodels of any domain, so unable to understand what are the critical data elements and how to map them to industry, Mapping with vendor tool and understand and map jpmc ontologies and term and entiries is dfficult. We dont have model, we dont have system, we dont have data. 
 * (T) Task was to streamline the process to make all its system across organization to connect to BCM. So, that if there is a change in product or services, it will be updated at BCM and will be applied all across the organization
 * (A) BCM introduced integration to solve this. So now using the integration, all the systems and depts were made to talk to each other and share the data 
 For Example: 

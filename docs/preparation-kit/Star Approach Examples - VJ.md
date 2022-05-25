@@ -13,9 +13,11 @@ XYZ Data Management has undertaken a transformation program, to create an centra
 * (T) Task was to streamline the process to make all its system across organization to connect seamlessly. 
   * So, risk across the organization can be identified quickly and remediation can be possible prior to time.
 * (A) I started with conceptual model, how the domain and entity looks in to ecosystem
-  * I go little down I have logical data model with entities and attribute and the relationship between them
+  * I go little down I have logical data model with entities and attribute and the relationship between them using MagicDraw tool
     * I go down little-bit can have the structure data, and can know which data is important based on geolocation and regulatory requirement and geo restrictions
     * Now comes to engineering, how to make that data available, so we created data lake to have any sort of data init.
+    * 2018 I moved in engineering team and started working on various data on-boarding and pipelines, worked on nifi, python java scala, etc, 
+      * which include various type of import and etl from different tpe of sources
 * (R) So, after integrating to boots BCM, system was organized and overhead of updating it everywhere get minimized.
 * Workflow:
   * Prerequisite: IMI system provides product, price and stock information to WCS

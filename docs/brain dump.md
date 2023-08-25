@@ -34,3 +34,5 @@ spec:
 
 
       ExecStart=/bin/bash -c '${TRINO_HOME}/bin/launcher start --pid-file ${TRINO_PID_DIR}/trino-server.pid --launcher-config ${TRINO_HOME}/bin/launcher.properties --node-config ${TRINO_CONF_DIR}/node.properties --jvm-config ${TRINO_CONF_DIR}/jvm.config --config ${TRINO_CONF_DIR}/config.properties --launcher-log-file ${TRINO_LOG}/launcher.log --
+
+echo -n YourStringHere | powershell -command "[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($input))"

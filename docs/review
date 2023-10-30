@@ -4,6 +4,29 @@ Implementation of the Mobius Instance for Mobius Seal Id
 One notable achievement was single-handedly establishing the development and test environment for Mobius, which has greatly expedited the development process and enabled a swift pace in feature development for Mobius. 
 This initiative has had a positive impact, as it now allows ad-hoc users to utilize the Mobius platform, providing them with substantial benefits. 
 
+Implementation of the Mobius Instance for CWS Seal Id
+
+In my role overseeing the Mobius Instance for CWS Seal Id, I demonstrated leadership by managing all engineering activities, from development through deployment and go-live support. 
+One of the standout achievements was taking ownership of understanding the design and subsequently designing a solution to enable on-demand data access, as opposed to the pull-push model previously utilized in CSDW.
+A critical aspect of this endeavor was the ownership I took in writing SQL, an integral component of the entire delivery process. This included crafting a business logic view, VulAsset, which stands as a significant milestone for Mobius. 
+This view efficiently pulls data from five distinct sources, serving as a testament to Mobius' capabilities.
+In a crucial juncture where we encountered a timeline setback during UAT deployment, I proactively took steps to rectify the situation. 
+I streamlined the deployment process within a week, not only for UAT but also for production, ensuring that we stayed on track.
+Additionally, I took the initiative to create monitoring dashboards. These dashboards have proved invaluable, providing both the CWS and Mobius teams with the means to monitor system health and promptly take appropriate actions when needed.
+These accomplishments not only met the expectations for my level but also exceeded them. My commitment to understanding and improving systems, paired with my hands-on approach in writing SQL, significantly contributed to the success of the project. These efforts were crucial in maintaining project timelines and ensuring the robust performance of the system.
+
+Implementation of the Mobius Instance for CAW Seal Id:
+For the Mobius Instance dedicated to CAW Seal Id, I took the responsibility of independently establishing both the development and production environments. 
+This strategic move enabled our team to effectively showcase the value of Mobius. This deployment successfully went live in February 2023. 
+Personally, I championed the promotion of this deployment across all environments for MSV users, specifically targeting the MSV use case.
+
+The outcome of this effort has been highly impactful for CTC Organization. MSV users are now empowered to utilize the CAW environment for their specific use case, and they continue to benefit from this resource. 
+This achievement not only met but exceeded the expectations for my level, showcasing a proactive approach and a commitment to excellence. 
+It's important to note that this accomplishment was achieved in the context of a dynamic environment, further highlighting its significance.
+
+
+This accomplishment stands as a testament to my dedication to driving value and efficiency within our projects, and I look forward to building on this success in the future.
+
 
 
 These accomplishments were not only aligned with the expectations for my level but also surpassed them. 
@@ -15,3 +38,5 @@ I was able to consistently meet and exceed expectations, demonstrating resilienc
 
 Overall, this year has been marked by a series of successful project deliveries, characterized by both tangible results and exemplary work ethic. 
 I am eager to build on these achievements in the coming year and continue contributing positively to our team's objectives.
+
+

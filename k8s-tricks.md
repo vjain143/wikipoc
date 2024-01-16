@@ -15,5 +15,24 @@ for /f "tokens=* USEBACKQ" %%F in (`kubectl get pods --namespace=!NAMESPACE! --s
 
 endlocal
 
+
+
+@echo off
+setlocal enabledelayedexpansion
+
+set "InputString=part1|part2"
+set "Delimiter=|"
+
+for /f "tokens=1,2 delims=!Delimiter!" %%a in ("!InputString!") do (
+    set "Part1=%%a"
+    set "Part2=%%b"
+)
+
+echo First Part: !Part1!
+echo Second Part: !Part2!
+
+endlocal
+
+
 ```
 

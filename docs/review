@@ -7,3 +7,18 @@ WITH NumberSequence AS (
 )
 SELECT *
 FROM NumberSequence;
+
+
+WITH RECURSIVE EmployeeSelector AS (
+  SELECT 1 AS idx, id, name, salary
+  FROM employees
+  WHERE id = 1  -- Initial condition
+  
+  UNION ALL
+  
+  SELECT es.idx + 1, e.id, e.name, e.salary
+  FROM EmployeeSelector es
+  JOIN employees e ON es.idx + 1 = e.id
+)
+SELECT *
+FROM EmployeeSelector;

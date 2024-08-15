@@ -38,3 +38,6 @@ spec:
 echo -n YourStringHere | powershell -command "[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($input))"
 
 kubectl get deployments --no-headers | awk '{print $1}' | xargs -I {} kubectl rollout restart deployment/{}
+
+
+kubectl get pod my-app-pod -n default -o=jsonpath='{range .status.containerStatuses[*]}{.name}{"\t"}{.ready}{"\t"}{.state.waiting.reason}{"\t"}{.state.running.startedAt}{"\t"}{.state.terminated.reason}{"\n"}{end}' | column -t -N "NAME,READY,WAITING_REASON,RUNNING_SINCE,TERMINATED_REASON"
